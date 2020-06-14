@@ -1,0 +1,84 @@
+Açai Berries_
+Apple_
+Apricot_
+Avocado_
+Banana_
+Bilberry_
+Blackberry_
+Blackcurrant_
+Blueberry_
+Boysenberry_
+Cantaloupe_
+Currant_
+Cherry_
+Cherimoya_
+Cloudberry_
+Coconut_
+Cranberry_
+Damson_
+Date_
+Dragonfruit_
+Durian_
+Elderberry_
+Feijoa_
+Fig_
+Goji berry_
+Gooseberry_
+Grape_
+Raisin_
+Grapefruit_
+Guava_
+Huckleberry_
+Jabouticaba_
+Jackfruit_
+Jambul_
+Jujube_
+Juniper berry_
+Kiwi fruit_
+Kiwano_
+Kumquat_
+Lemon_
+Lime_
+Loquat_
+Lychee_
+Mango_
+Marion berry_
+Melon_
+Cantaloupe_
+Honeydew_
+Watermelon_
+Miracle fruit_
+Mulberry_
+Nectarine_
+Olive_
+Orange_
+Blood Orange_
+Clementine_
+Mandarine_
+Tangerine_
+Papaya_
+Passionfruit_
+Peach_
+Pear_
+Persimmon_
+Physalis_
+Plum_
+Pineapple_
+Pumpkin_
+Pomegranate_
+Pomelo_
+Purple Mangosteen_
+Quince_
+Raspberry_
+Salmon berry_
+Black raspberry_
+Rambutan_
+Redcurrant_
+Salal berry_
+Satsuma_
+Star fruit_
+Strawberry_
+Squash_
+Tamarillo_
+Tomato_
+Ugli fruit

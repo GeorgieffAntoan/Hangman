@@ -1,0 +1,204 @@
+Afghanistan_
+Albania_
+Algeria_
+Andorra_
+Angola_
+Antigua and Barbuda_
+Argentina_
+Armenia_
+Aruba_
+Australia_
+Austria_
+Azerbaijan_
+Bahamas, The_
+Bahrain_
+Bangladesh_
+Barbados_
+Belarus_
+Belgium_
+Belize_
+Benin_
+Bhutan_
+Bolivia_
+Bosnia and Herzegovina_
+Botswana_
+Brazil_
+Brunei_
+Bulgaria_
+Burkina Faso_
+Burma_
+Burundi_
+Cambodia_
+Cameroon_
+Canada_
+Cape Verde_
+Central African Republic_
+Chad_
+Chile_
+China_
+Colombia_
+Comoros_
+Congo, Democratic Republic of the_
+Congo, Republic of the_
+Costa Rica_
+Cote d'Ivoire_
+Croatia_
+Cuba_
+Curacao_
+Cyprus_
+Czech Republic_
+Denmark_
+Djibouti_
+Dominica_
+Dominican Republic_
+East Timor (see Timor-Leste)_
+Ecuador_
+Egypt_
+El Salvador_
+Equatorial Guinea_
+Eritrea_
+Estonia_
+Ethiopia_
+Fiji_
+Finland_
+France_
+Gabon_
+Gambia, The_
+Georgia_
+Germany_
+Ghana_
+Greece_
+Grenada_
+Guatemala_
+Guinea_
+Guinea-Bissau_
+Guyana_
+Haiti_
+Holy See_
+Honduras_
+Hong Kong_
+Hungary_
+Iceland_
+India_
+Indonesia_
+Iran_
+Iraq_
+Ireland_
+Israel_
+Italy_
+Jamaica_
+Japan_
+Jordan_
+Kazakhstan_
+Kenya_
+Kiribati_
+Korea, North_
+Korea, South_
+Kosovo_
+Kuwait_
+Kyrgyzstan_
+Laos_
+Latvia_
+Lebanon_
+Lesotho_
+Liberia_
+Libya_
+Liechtenstein_
+Lithuania_
+Luxembourg_
+ Macau_
+Macedonia_
+Madagascar_
+Malawi_
+Malaysia_
+Maldives_
+Mali_
+Malta_
+Marshall Islands_
+Mauritania_
+Mauritius_
+Mexico_
+Micronesia_
+Moldova_
+Monaco_
+Mongolia_
+Montenegro_
+Morocco_
+Mozambique_
+Namibia_
+Nauru_
+Nepal_
+Netherlands_
+Netherlands Antilles_
+New Zealand_
+Nicaragua_
+Niger_
+Nigeria_
+North Korea_
+Norway_
+Oman_
+ Pakistan_
+Palau_
+Palestinian Territories_
+Panama_
+Papua New Guinea_
+Paraguay_
+Peru_
+Philippines_
+Poland_
+Portugal_
+Qatar_
+ Romania_
+Russia_
+Rwanda_
+Saint Kitts and Nevis_
+Saint Lucia_
+Saint Vincent and the Grenadines_
+Samoa_
+San Marino_
+Sao Tome and Principe_
+Saudi Arabia_
+Senegal_
+Serbia_
+Seychelles_
+Sierra Leone_
+Singapore_
+Sint Maarten_
+Slovakia_
+Slovenia_
+Solomon Islands_
+Somalia_
+South Africa_
+South Korea_
+South Sudan_
+Spain_
+Sri Lanka_
+Sudan_
+Suriname_
+Swaziland_
+Sweden_
+Switzerland_
+Syria   Taiwan_
+Tajikistan_
+Tanzania_
+Thailand_
+Timor-Leste_
+Togo_
+Tonga_
+Trinidad and Tobago_
+Tunisia_
+Turkey_
+Turkmenistan_
+Tuvalu_
+Uganda_
+Ukraine_
+United Arab Emirates_
+United Kingdom_
+Uruguay_
+Uzbekistan_
+Vanuatu_
+Venezuela_
+Vietnam_
+Yemen_
+Zambia_
+Zimbabwe

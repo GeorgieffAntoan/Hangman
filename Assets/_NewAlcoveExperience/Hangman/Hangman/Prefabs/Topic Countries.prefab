@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &109102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400374}
+  - component: {fileID: 11472110}
+  m_Layer: 0
+  m_Name: Topic Countries
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.578211, y: 7.8267217, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11472110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d3e93e96ec64348b522a193751d1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topic: Country
+  words: Afghanistan_Albania_Algeria_Andorra_Angola_Antigua and Barbuda_Argentina_Armenia_Aruba_Australia_Austria_Azerbaijan_Bahamas,
+    The_Bahrain_Bangladesh_Barbados_Belarus_Belgium_Belize_Benin_Bhutan_Bolivia_Bosnia
+    and Herzegovina_Botswana_Brazil_Brunei_Bulgaria_Burkina Faso_Burma_Burundi_Cambodia_Cameroon_Canada_Cape
+    Verde_Central African Republic_Chad_Chile_China_Colombia_Comoros_Congo, Democratic
+    Republic of the_Congo, Republic of the_Costa Rica_Cote d'Ivoire_Croatia_Cuba_Curacao_Cyprus_Czech
+    Republic_Denmark_Djibouti_Dominica_Dominican Republic_East Timor (see Timor-Leste)_Ecuador_Egypt_El
+    Salvador_Equatorial Guinea_Eritrea_Estonia_Ethiopia_Fiji_Finland_France_Gabon_Gambia,
+    The_Georgia_Germany_Ghana_Greece_Grenada_Guatemala_Guinea_Guinea-Bissau_Guyana_Haiti_Holy
+    See_Honduras_Hong Kong_Hungary_Iceland_India_Indonesia_Iran_Iraq_Ireland_Israel_Italy_Jamaica_Japan_Jordan_Kazakhstan_Kenya_Kiribati_Korea,
+    North_Korea, South_Kosovo_Kuwait_Kyrgyzstan_Laos_Latvia_Lebanon_Lesotho_Liberia_Libya_Liechtenstein_Lithuania_Luxembourg_
+    Macau_Macedonia_Madagascar_Malawi_Malaysia_Maldives_Mali_Malta_Marshall Islands_Mauritania_Mauritius_Mexico_Micronesia_Moldova_Monaco_Mongolia_Montenegro_Morocco_Mozambique_Namibia_Nauru_Nepal_Netherlands_Netherlands
+    Antilles_New Zealand_Nicaragua_Niger_Nigeria_North Korea_Norway_Oman_ Pakistan_Palau_Palestinian
+    Territories_Panama_Papua New Guinea_Paraguay_Peru_Philippines_Poland_Portugal_Qatar_
+    Romania_Russia_Rwanda_Saint Kitts and Nevis_Saint Lucia_Saint Vincent and the
+    Grenadines_Samoa_San Marino_Sao Tome and Principe_Saudi Arabia_Senegal_Serbia_Seychelles_Sierra
+    Leone_Singapore_Sint Maarten_Slovakia_Slovenia_Solomon Islands_Somalia_South Africa_South
+    Korea_South Sudan_Spain_Sri Lanka_Sudan_Suriname_Swaziland_Sweden_Switzerland_Syria   Taiwan_Tajikistan_Tanzania_Thailand_Timor-Leste_Togo_Tonga_Trinidad
+    and Tobago_Tunisia_Turkey_Turkmenistan_Tuvalu_Uganda_Ukraine_United Arab Emirates_United
+    Kingdom_Uruguay_Uzbekistan_Vanuatu_Venezuela_Vietnam_Yemen_Zambia_Zimbabwe
+  splitCharacter: _
+  topicColor: {r: 0.42844835, g: 0.875, b: 0, a: 1}

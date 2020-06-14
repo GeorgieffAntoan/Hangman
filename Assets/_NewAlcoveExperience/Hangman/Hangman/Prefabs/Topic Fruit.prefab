@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &109102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 400374}
+  - component: {fileID: 11472110}
+  m_Layer: 0
+  m_Name: Topic Fruit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.578211, y: 7.8267217, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11472110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48d3e93e96ec64348b522a193751d1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topic: Fruit
+  words: "A\xE7ai Berries_ Apple_ Apricot_ Avocado_ Banana_ Bilberry_ Blackberry_
+    Blackcurrant_ Blueberry_ Boysenberry_ Cantaloupe_ Currant_ Cherry_ Cherimoya_
+    Cloudberry_ Coconut_ Cranberry_ Damson_ Date_ Dragonfruit_ Durian_ Elderberry_
+    Feijoa_ Fig_ Goji berry_ Gooseberry_ Grape_ Raisin_ Grapefruit_ Guava_ Huckleberry_
+    Jabouticaba_ Jackfruit_ Jambul_ Jujube_ Juniper berry_ Kiwi fruit_ Kiwano_ Kumquat_
+    Lemon_ Lime_ Loquat_ Lychee_ Mango_ Marion berry_ Melon_ Cantaloupe_ Honeydew_
+    Watermelon_ Miracle fruit_ Mulberry_ Nectarine_ Olive_ Orange_ Blood Orange_ Clementine_
+    Mandarine_ Tangerine_ Papaya_ Passionfruit_ Peach_ Pear_ Persimmon_ Physalis_
+    Plum_ Pineapple_ Pumpkin_ Pomegranate_ Pomelo_ Purple Mangosteen_ Quince_ Raspberry_
+    Salmon berry_ Black raspberry_ Rambutan_ Redcurrant_ Salal berry_ Satsuma_ Star
+    fruit_ Strawberry_ Squash_ Tamarillo_ Tomato_ Ugli fruit"
+  splitCharacter: _
+  topicColor: {r: 0.42844835, g: 0.875, b: 0, a: 1}
