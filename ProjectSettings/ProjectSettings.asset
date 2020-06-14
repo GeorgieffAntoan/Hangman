@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.0.11
+  bundleVersion: 0.0.18
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -161,7 +161,7 @@ PlayerSettings:
     WebGL: com.oculus.UnitySample
     iOS: com.oculus.UnitySample
   buildNumber: {}
-  AndroidBundleVersionCode: 11
+  AndroidBundleVersionCode: 18
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
@@ -250,7 +250,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 1
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/antoa/Desktop/hangmanPlayground/mandelbox-alcoveplayground-29b8388a73eb/user.keystore
+  AndroidKeystoreName: C:/Users/Admin/Desktop/fixHangman/Hangman/user.keystore
   AndroidKeyaliasName: hangman
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1

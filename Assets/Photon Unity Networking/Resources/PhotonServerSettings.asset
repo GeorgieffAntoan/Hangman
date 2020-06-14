@@ -29,20 +29,21 @@ MonoBehaviour:
   RunInBackground: 1
   RpcList:
   - Chat
+  - CheckLetter
+  - Click
   - DestroyRpc
+  - GetWord
   - InstantiateRpc
+  - LateStart
   - PickupItemInit
   - PunPickup
   - PunPickupSimple
   - PunRespawn
+  - RandomTopic
   - RequestForPickupItems
   - RequestForPickupTimes
   - SetColor
-  - GetWord
-  - CheckLetter
-  - LateStart
-  - RandomTopic
-  - Click
   - SolvedWord
   - WrongLetter
+  - SendString
   DisableAutoOpenWizard: 1
