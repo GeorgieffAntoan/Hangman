@@ -11,7 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/__Examples/NewSceneExperience/flatscene.unity
     guid: 32aae293be3076043a53f71cb8a8876b
+  - enabled: 0
+    path: Assets/HangmanMode.unity
+    guid: 8c19a7057b344774eae12cdd2a5ee667
   - enabled: 1
-    path: Assets/_NewAlcoveExperience/Hangman/Hangman/Hangman Game Scene.unity
+    path: Assets/_NewAlcoveExperience/Hangman/Hangman/HangmanMulti.unity
     guid: efff9e888f46e9d4db8b2e510ead123e
+  - enabled: 0
+    path: Assets/HangmanSingle.unity
+    guid: 1bc6986cc0ce83a4cac16ddc8d98caf9
   m_configObjects: {}

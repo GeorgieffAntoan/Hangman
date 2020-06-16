@@ -46,4 +46,6 @@ MonoBehaviour:
   - SolvedWord
   - WrongLetter
   - SendString
+  - Restart
+  - IsClicked
   DisableAutoOpenWizard: 1

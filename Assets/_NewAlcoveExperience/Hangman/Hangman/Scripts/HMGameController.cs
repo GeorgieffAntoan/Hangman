@@ -3,25 +3,27 @@ using System;
 using UnityEngine.UI;
 using System.Globalization;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class HMGameController:MonoBehaviour{
-    
+public class HMGameController : MonoBehaviour {
+
     public Text UISolveText;					// Reference to UI text objects
     public Text UITopicText;
     public Text UISolutionText;
-    public Button UINextButton;
     PhotonView photonView;
     PhotonView photonView1;
     PhotonView photonView2;
     PhotonView photonView3;
     PhotonView photonView4;
-
+    PhotonView photonView5;
+    PhotonView photonView6;
+    String recieved_string;
 
     public GameObject[] hangmanStates;				// Manually assing states in the scene of the different states of the hanged man
     public GameObject hangmanWin;					// Win screen game object
     public HMTopics[] topics;
     public GameObject word; // Manually assign topics with words to this array
-    
+    public GameObject disableMe;
     int currentHangmanState;		// The current index of hangmanState (game object on stage)
     string currentTopic;			// Current topic name, used for the topic text
     int currentTopicIndex;			// Topic index keeps track of what HMTopics is in use
@@ -29,47 +31,55 @@ public class HMGameController:MonoBehaviour{
     string currentWord;				// What word is the player trying to solve
     int currentWordLength;			// How long is the word (not counting spaces)
     int lettersFound;				// How many letters has the player found, used to check if word is complete
-    
+    bool a = true;
     [HideInInspector]
     public bool solved;							// Has player solved the word
     [HideInInspector]
-    public bool failed;							// Has player failed the word
+    public bool failed;	
+    // Has player failed the word
     [HideInInspector]
-    public string allKeyboardLetters;				// Contains a string with all letters that is used in the on-screen keyboard
-    
+    public string allKeyboardLetters;               // Contains a string with all letters that is used in the on-screen keyboard
+
     public static HMGameController instance;		// HMGameController is a singleton. HMGameController.instance.DoSomeThing();
     // Ensure that the instance is destroyed when the game is stopped in the editor.
-    public void OnApplicationQuit() {					
+    public void OnApplicationQuit() {
         instance = null;
     }
-    
-    public void Awake() {							// Make sure there are no other instances of this gameobject
-    	if (instance != null){
-            Destroy (gameObject);
-        }else{
+
+    public void Awake() {                           // Make sure there are no other instances of this gameobject
+        if (instance != null) {
+            Destroy(gameObject);
+        } else {
             instance = this;
-        } 
+        }
+    } 
+
+    void Update()
+    {
+        //  Debug.Log(currentWord);
+        StartUs();
+        if (OVRInput.GetDown(OVRInput.Button.Two)) AlcoveThirdPartyExperienceController.ReturnToHomeEnvironment();
+        if (PhotonNetwork.isMasterClient && PhotonNetwork.playerList.Length == 1) UISolveText.text = "Waiting for second player";
     }
 
-     void Update()
+    public void StartUs()
     {
-      //  Debug.Log(currentWord);
-        if (PhotonNetwork.isMasterClient) UISolveText.text = "The word is " + currentWord;
-    }
-
-    public void Start()
-    {
-        UINextButton.interactable = false;          // Disable the restart button
-        UISolutionText.text = "";                   // Wipe out the solution text
-        if (PhotonNetwork.isMasterClient)
+        if (PhotonNetwork.isMasterClient && PhotonNetwork.playerList.Length > 1 && a)
         {
+            a = false;
             StartCoroutine(TopicFinder());                          // Find a random topic from the topic array
                                                                     // Split the words from the topics into a array of strings
             StartCoroutine(LoadWord());                             // Find a random word from the words array
                                                                     //GetWord();    	
             StartCoroutine(WordText());
+
             // Delayed part of the start so that the keyboard script has finished adding letters to allKeyboardLetters variable
         }
+    }
+
+    public void Start()
+    {
+        UISolutionText.text = "";                   // Wipe out the solution text      
     }
 
     private IEnumerator LoadWord()
@@ -93,12 +103,21 @@ public class HMGameController:MonoBehaviour{
         photonView2.RPC("RandomTopic", PhotonTargets.OthersBuffered);
     }
     [PunRPC]
-    public void LateStart(){
-    	currentWordLength = CountLettersInWord();	// Count how many letters the word is using
+    public void LateStart() {
+        currentWordLength = CountLettersInWord();	// Count how many letters the word is using
+    }
+
+    public void StartRestart()
+    {
+        photonView6 = GetComponent<PhotonView>();
+        photonView6.RPC("Restart", PhotonTargets.AllBuffered);
     }
     
-    public void Restart() {									// Very simple way to restart game
-    	Application.LoadLevel(Application.loadedLevel);
+    [PunRPC]
+    public void Restart() {                                 // Very simple way to restart game
+        PhotonNetwork.automaticallySyncScene = true;
+        PhotonNetwork.LoadLevel(SceneManager.GetActiveScene().buildIndex);
+        PhotonNetwork.automaticallySyncScene = true;
     }
     
     [PunRPC]
@@ -132,15 +151,13 @@ public class HMGameController:MonoBehaviour{
     	hangmanWin.SetActive(true);								// Activates the win game object screen
     	hangmanWin.transform.position = hangmanStates[currentHangmanState].transform.position;	// Position the win screen to the right position ( "Hangman State 0" gameobject)
     	hangmanStates[currentHangmanState].SetActive(false);	// Disables the last hangman state object
-    	UINextButton.interactable = true;						// Player can now press the restart button
     }
     [PunRPC]
     public void WrongLetter(){	
-    	if(!failed){
+    	if(!failed) {
     		if(currentHangmanState > hangmanStates.Length-3){			// Check if player has reached the end of the hangman state array
     			failed=true;											// failed is true, now player can not press the letter buttons
-    			UINextButton.interactable = true;						// Player can now press the restart button
-    			UISolutionText.text = currentWord;						// Display the correct answer in the UI
+    			UISolutionText.text = recieved_string;						// Display the correct answer in the UI
     		}
     		hangmanStates[currentHangmanState].SetActive(false);		// Disable the current Hangman state object
     		currentHangmanState++;
@@ -152,30 +169,33 @@ public class HMGameController:MonoBehaviour{
     public void GetWord(){
         words = topics[currentTopicIndex].words.Split(topics[currentTopicIndex].splitCharacter[0]);
         currentWord = words[UnityEngine.Random.Range(0, words.Length)].ToUpper();
-       // word = PhotonNetwork.Instantiate(currentWord, new Vector3(0, 0, 0), Quaternion.identity, 1);
-        photonView.RPC("SendString", PhotonTargets.MasterClient, currentWord);      
-        // Find a random word from the words array
+        photonView5 = GetComponent<PhotonView>();
+        photonView5.RPC("SendString", PhotonTargets.All, currentWord);      
     }
 
     [PunRPC]
-    public void SendString(String currentWord)
+    public void SendString(String a)
     {
-        String recieved_string = currentWord;
-        Debug.Log(recieved_string);
+        recieved_string = a;
+        if (PhotonNetwork.isMasterClient) UISolveText.text = "The word is " + recieved_string;
     }
 
     public int CountLettersInWord(){										//Counts letters in the current word, only counts letters that is represented in the keyboard
-    	int c = currentWord.Length;
+    	int c = recieved_string.Length;
     	int s = 0;
     	UISolveText.text = "";
-    	for(int i = 0; i < currentWord.Length; i++){
-    		if(!CheckLetterKeyboard(currentWord[i].ToString())){
-    			s++;
-    			UISolveText.text = UISolveText.text + currentWord[i].ToString();	// Set text that is not represented by the keyboard, like numbers
-    		}else{
-    			UISolveText.text = UISolveText.text + "-";							// Set dashes in solve text like ---- --- ----
-    		}
-    	}
+        for (int i = 0; i < recieved_string.Length; i++)
+        {
+            if (!CheckLetterKeyboard(recieved_string[i].ToString()))
+            {
+                s++;
+                UISolveText.text = UISolveText.text + recieved_string[i].ToString();    // Set text that is not represented by the keyboard, like numbers
+            }
+            else
+            {
+                UISolveText.text = UISolveText.text + "-";                          // Set dashes in solve text like ---- --- ----
+            }
+        }	
     	return c-s;															//Return letter count without spaces
     }
     
@@ -188,8 +208,9 @@ public class HMGameController:MonoBehaviour{
     	return false;														// The letter has not been found in the keyboard, this letter will be visible in the solve text when it appears
     }
     [PunRPC]
-    public void RandomTopic(){													
-    	currentTopicIndex = UnityEngine.Random.Range(0, topics.Length);					// Find a random topic from the topic array
+    public void RandomTopic(){
+        disableMe.SetActive(true);
+        currentTopicIndex = UnityEngine.Random.Range(0, topics.Length);					// Find a random topic from the topic array
     	currentTopic = topics[currentTopicIndex].topic.ToUpper();			// Set current topic string
     	UITopicText.text = currentTopic;                                    // Change UI topic text
         UITopicText.color = Color.red;			// Change color of topic text
